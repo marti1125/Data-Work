@@ -26,22 +26,47 @@
   				<div class="span9">  					
   					<form class="form-search">
   						<button type="submit" class="btn">Buscar</button>
-				    	<input type="text" class="input-medium search-query">				    	
-				    	<a href="#myModal" role="button" class="btn" data-toggle="modal">Agregar</a>
+				    	<input type="text" class="input-medium search-query">
 				    </form>
-				    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-							<h3 id="myModalLabel">Disponibilidad Horaria</h3>
-						</div>
-						<div class="modal-body">
-							<p>One fine body…</p>
-						</div>
-						<div class="modal-footer">
-							<button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
-							<button class="btn btn-primary">Guardar</button>
-						</div>
-					</div>
+				    <table class="table">
+						<thead>
+							<tr>
+								<th>Lu.</th>
+								<th>Ma.</th>
+								<th>Mi.</th>
+								<th>Ju.</th>
+								<th>Vi.</th>
+								<th>Sa.</th>
+								<th>Meses</th>
+								<th>Año</th>
+								<th>Hora</th>								
+							</tr>
+						</thead>
+						<tbody>
+							<tbody>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><input type="checkbox"></td>
+									<td><input type="checkbox"></td>
+									<td><input type="checkbox"></td>
+									<td><input type="checkbox"></td>
+									<td><input type="checkbox"></td>
+									<td>										
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										Ene/Feb
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										Mar/Dic
+									</td>
+									<td>
+										<input class="span1" type="text"/>
+									</td>
+									<td>
+										<input class="span1" type="text"/>
+									</td>
+								</tr>
+							</tbody>
+						</tbody>
+					</table>				    
   				</div>
   			</div>
   			<div class="row">
