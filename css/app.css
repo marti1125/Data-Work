@@ -1,4 +1,22 @@
 /** custom **/
-.centrarTabla {
-	margin: 0 auto;
+.thmes {
+	width: 14%;
+}
+.mes {
+	width: 25%;
+}
+.thanio {
+	width: 2%;
+}
+.time {
+	width: 12%;
+}
+.thdia {
+	width: 3%;
+}
+.thcenter {
+	text-align: center !important;
+}
+.thhora {
+	width: 20%;	
 }

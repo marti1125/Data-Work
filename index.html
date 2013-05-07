@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="css/bootstrap.css" />  
 
   <link rel="stylesheet" href="css/bootstrap-responsive.css" />
-
+  
   <link rel="stylesheet" href="css/app.css" />
 
 </head>
 <body>	  
   <br/>
   <div class="container">
-  	<div class="row">
+  	<div class="row">  		
   		<div class="span3">
   			<ul class="nav nav-list">    			
    				<li class="active"><a href="#">Disponibilidad Horaria</a></li>    			
@@ -31,15 +31,15 @@
 				    <table class="table">
 						<thead>
 							<tr>
-								<th>Lu.</th>
-								<th>Ma.</th>
-								<th>Mi.</th>
-								<th>Ju.</th>
-								<th>Vi.</th>
-								<th>Sa.</th>
-								<th>Meses</th>
-								<th>Año</th>
-								<th>Hora</th>								
+								<th class="thdia">Lu.</th>
+								<th class="thdia">Ma.</th>
+								<th class="thdia">Mi.</th>
+								<th class="thdia">Ju.</th>
+								<th class="thdia">Vi.</th>
+								<th class="thdia">Sa.</th>
+								<th class="thcenter thmes">Meses</th>
+								<th class="thcenter thanio">Año</th>
+								<th class="thcenter thhora">Hora</th>								
 							</tr>
 						</thead>
 						<tbody>
@@ -51,35 +51,31 @@
 									<td><input type="checkbox"></td>
 									<td><input type="checkbox"></td>
 									<td><input type="checkbox"></td>
-									<td>										
+									<td class="thcenter">										
 										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
 										Ene/Feb
+										&nbsp;
 										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
 										Mar/Dic
 									</td>
-									<td>
+									<td class="thcenter">
 										<input class="span1" type="text"/>
 									</td>
-									<td>
-										<input class="span1" type="text"/>
+									<td class="thhora thcenter">
+										<input class="time" type="text"/> : <input class="time" type="text"/> - <input class="time" type="text"/> : <input class="time" type="text"/>
 									</td>
 								</tr>
 							</tbody>
 						</tbody>
 					</table>				    
   				</div>
-  			</div>
-  			<div class="row">
-  				<div class="span12">
-  					
-  				</div>
-  			</div>
+  			</div>  			
   		</div>
   	</div>
   </div>
   
   <script src="js/jquery-1.9.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>  
-  
+  <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
