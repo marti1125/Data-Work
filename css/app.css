@@ -1,4 +1,7 @@
 /** custom **/
+body {
+	background-image: url('../img/grey.png');
+}
 .thmes {
 	width: 15%;
 }
@@ -22,4 +25,11 @@
 }
 .thacc {
 	width: 9%;
+}
+.right {
+	float: right;
+}
+.right2 {
+	float: right;
+	margin-right: 10px;
 }
