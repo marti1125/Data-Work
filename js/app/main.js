@@ -9,7 +9,7 @@ define(["jquery","bootstrap.min"], function($) {
 			s[14] = 4;
 			s[19] = (s[19] & 0x3) | 0x8;
 			for (var i = 0; i <36; i++) s[i] = itoh[s[i]];
-			s[8] = s[13] = s[18] = s[23] = '-';
+			s[8] = s[13] = s[18] = s[23] = '_';
 			return s.join('');
 		 
 		}
@@ -21,35 +21,58 @@ define(["jquery","bootstrap.min"], function($) {
         $('#agregarFilaHorario').click(function(){
         	var valor = randomUUID();
 		  	$('.horarios').prepend(
-		  			'<tr>'
-		  		+		'<td><input type="checkbox"></td>'
-		  		+		'<td><input type="checkbox"></td>'
-		  		+		'<td><input type="checkbox"></td>'
-		  		+		'<td><input type="checkbox"></td>'
-		  		+		'<td><input type="checkbox"></td>'
-		  		+		'<td><input type="checkbox"></td>'
+		  			'<tr class="filahora" id="'+valor+'">'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-1"></td>'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-2"></td>'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-3"></td>'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-4"></td>'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-5"></td>'
+		  		+		'<td><input class="control" type="checkbox" id="'+valor+'-6"></td>'
 		  		+		'<td class="thcenter">'
-		  		+			'<input type="radio" name="'+valor+'" id="optionsRadios1" value="option1" checked>'
+		  		+			'<input class="controlradio" type="radio" name="'+valor+'" id="'+valor+'" value="option1" checked>'
 		  		+			'&nbsp;Ene/Feb'
 		  		+			'&nbsp;&nbsp;&nbsp;'
-		  		+			'<input type="radio" name="'+valor+'" id="optionsRadios2" value="option2">'
+		  		+			'<input class="controlradio" type="radio" name="'+valor+'" id="'+valor+'" value="option2">'
 		  		+			'&nbsp;Mar/Dic'
 		  		+		'</td>'
 		  		+		'<td class="thcenter">'
-		  		+			'<input class="span1" type="text"/>'
+		  		+			'<input class="span1 control" type="text" id="'+valor+'-7"/>'
 		  		+		'</td>'
 		  		+		'<td class="thhora thcenter">'
-		  		+			'<input class="time" type="text"/> : <input class="time" type="text"/> - <input class="time"'
-		  		+			'type="text"/> : <input class="time" type="text"/>'
+		  		+			'<input class="time control" type="text" id="'+valor+'-8" /> : <input class="time control" type="text" id="'+valor+'-9"/> - <input class="time control"'
+		  		+			'type="text" id="'+valor+'-10"/> : <input class="time control" type="text" id="'+valor+'-11"/>'
 		  		+		'</td>'
 		  		+		'<td>'
 		  		+			'<a href="#" class="btn"><i class="icon-ok"></i></a>&nbsp;&nbsp;'
 		  		+			'<a href="#" id="eliminar" class="btn eliminar"><i class="icon-remove"></i></a>'
 		  		+		'</td>'
 		  		+	'</tr>'
-		  	);
+		  	);	
+			
+
+			$('.controlradio').click( function(){
+
+				var id = $(this).attr('id');
+				var idsencundario = id.split("-");
+				var idfinalpintar = idsencundario[0];	
+				
+				$( "#"+ idfinalpintar).css('background','#FFD700');
+
+			});
+
+			$('.control').change(function() {
+
+				var id = $(this).attr('id');
+				var idsencundario = id.split("-");
+				var idfinalpintar = idsencundario[0];	
+				
+				$( "#"+ idfinalpintar).css('background','#FFD700');							
+				
+			});
+
 		});
 
     });
 
 });
+
